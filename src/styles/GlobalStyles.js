@@ -24,7 +24,9 @@ export const GlobalStyles = createGlobalStyle`
         color: inherit;
     }
     body{
-        background-color:#333;
-        color: aliceblue;
+        background-color:#86A2A5;
+        color: #2A4144;
+        font-family: "Karla", serif;
+        font-weight: 400;
     }
 `;
