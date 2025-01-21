@@ -27,7 +27,9 @@ const StyledInput = styled.input`
 	width: 295px;
 	height: 51px;
 	border-radius: 8px;
-	border: #86a2a5 solid 1px;
+	/* border: #86a2a5 solid 1px; */
+	border: ${props =>
+		props.$active ? '#D73C3C solid 1px' : '#86a2a5 solid 1px'};
 	padding-left: 15px;
 `;
 
@@ -111,7 +113,9 @@ const StyledMessageBox = styled.textarea`
 	width: 295px;
 	min-height: 272px;
 	border-radius: 8px;
-	border: #86a2a5 solid 1px;
+	/* border: #86a2a5 solid 1px; */
+	border: ${props =>
+		props.$active ? '#D73C3C solid 1px' : '#86a2a5 solid 1px'};
 `;
 
 const StyledCheckboxContainer = styled.div`
@@ -123,6 +127,20 @@ const StyledCheckboxContainer = styled.div`
 const StyledCheck = styled.input`
 	width: 18px;
 	height: 18px;
+	appearance: none;
+	border: 1px solid #86a2a5;
+
+	&:checked {
+		background-color: #0c7d69;
+	}
+
+	&:checked::after {
+		content: '✔';
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 `;
 
 const StyledCheckConsent = styled.p`
@@ -142,6 +160,12 @@ const StyledSubmit = styled.input`
 	font-size: 18px;
 	line-height: 150%;
 	font-weight: 700;
+`;
+
+const StyledError = styled.p`
+	margin: 0;
+	margin-top: 8px;
+	color: #d73c3c;
 `;
 
 export {
@@ -165,5 +189,6 @@ export {
 	StyledSpanQueryType,
 	StyledLabelGeneral,
 	StyledLabelSupport,
-	StyledInput
+	StyledInput,
+	StyledError
 };
