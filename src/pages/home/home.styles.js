@@ -113,7 +113,6 @@ const StyledMessageBox = styled.textarea`
 	width: 295px;
 	min-height: 272px;
 	border-radius: 8px;
-	/* border: #86a2a5 solid 1px; */
 	border: ${props =>
 		props.$active ? '#D73C3C solid 1px' : '#86a2a5 solid 1px'};
 `;
@@ -135,8 +134,8 @@ const StyledCheck = styled.input`
 	}
 
 	&:checked::after {
-		content: '✔';
-		color: white;
+		content: '✔ ';
+		color: #fff;
 		display: flex;
 		align-items: center;
 		justify-content: center;
